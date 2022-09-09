@@ -8,7 +8,7 @@ export interface SelectProps
   color?: string;
 }
 
-export function Select({ label, options, backgroundColor, color, style, ...props }: SelectProps) {
+export function Select({ label, options, backgroundColor, color, style }: SelectProps) {
 	let _style = {
 		backgroundColor: backgroundColor,
 		color: color,
@@ -18,7 +18,7 @@ export function Select({ label, options, backgroundColor, color, style, ...props
   return (
     <div>
       <label>{label}</label>
-      <select style={_style} {...props}>
+      <select style={_style}>
         {options.map((option) => (
           <option key={option} value={option}>
             {option}
